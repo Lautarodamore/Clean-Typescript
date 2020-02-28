@@ -22,10 +22,7 @@ export class Profile {
         this.todos.push(todo);
     }
 
-    subtractTodo(todoName: string): void {
-        const todo = this.todos.filter(todo => todo.name == todoName)[0];
-        const index = this.todos.indexOf(todo);
-
+    subtractTodo(index: number): void {
         this.todos.splice(index, 1);
     }
 }

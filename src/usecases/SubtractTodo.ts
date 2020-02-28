@@ -9,7 +9,12 @@ export class SubtractTodo {
 
     public execute(userNameProfile: string, todoName: string): void {
         const profile = this.profiles.find(userNameProfile);
-        profile.subtractTodo(todoName);
+        const todos = profile.getTodos();
+
+        const todo = todos.filter(todo => todo.name == todoName)[0];
+        const index = todos.indexOf(todo);
+
+        profile.subtractTodo(index);
     }
 }
 
