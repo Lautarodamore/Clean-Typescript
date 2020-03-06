@@ -3,8 +3,8 @@ import { Profile } from "../src/domain/entities/Profile";
 import { ProfileRepositoryInMemory } from "../src/domain/entities-repositories/ProfileRepositoryInMemory";
 import { SubtractTodo } from "../src/usecases/SubtractTodo";
 
-describe('Subtract todo', () => {
-    test('should ', () => {
+describe('Subtract todo shlould', () => {
+    test('delete a todo when todo name is given ', () => {
         const userNameProfile = "lautidamo";
         const todoName = "Todo test"
         const profiles = new ProfileRepositoryInMemory();
